@@ -5,21 +5,19 @@
 //  Created by Bruno Rangel on 04/06/23.
 //
 
+import Kingfisher
 import SwiftUI
 
 struct ProfileHeaderView: View {
     let user: User
 
+    @State private var showEditProfile = false
+
     var body: some View {
         VStack(spacing: 10) {
             // pic and status
             HStack {
-                profileImage(profileImageURL: user.profileImageURL)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 80, height: 80)
-                    .clipShape(Circle())
-                    .frame(maxWidth: .infinity)
+                CircularProfileImageView(user: user, size: .large)
                 Spacer()
                 UserStatView(value: 2, title: "Posts")
                 UserStatView(value: 1, title: "Followers")
@@ -46,7 +44,7 @@ struct ProfileHeaderView: View {
             // Action Button
             Button {
                 if user.isCurrentUser {
-                    print("Show edit profile")
+                    showEditProfile.toggle()
                 } else {
                     print("Follow user...")
                 }
@@ -68,13 +66,8 @@ struct ProfileHeaderView: View {
 
             Divider()
         }
-    }
-
-    func profileImage(profileImageURL: String?) -> Image {
-        if let profileImageURL = profileImageURL, !profileImageURL.isEmpty {
-            return Image(profileImageURL)
-        } else {
-            return Image(systemName: "person.circle")
+        .fullScreenCover(isPresented: $showEditProfile) {
+            EditProfileView(user: user)
         }
     }
 }
