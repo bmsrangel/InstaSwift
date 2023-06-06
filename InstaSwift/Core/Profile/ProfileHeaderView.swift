@@ -21,7 +21,7 @@ struct ProfileHeaderView: View {
                     .clipShape(Circle())
                     .frame(maxWidth: .infinity)
                 Spacer()
-                UserStatView(value: 3, title: "Posts")
+                UserStatView(value: 2, title: "Posts")
                 UserStatView(value: 1, title: "Followers")
                 UserStatView(value: 2, title: "Following")
             }
