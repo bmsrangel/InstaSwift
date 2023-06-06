@@ -9,12 +9,12 @@ import SwiftUI
 
 struct ProfileHeaderView: View {
     let user: User
-    
+
     var body: some View {
         VStack(spacing: 10) {
             // pic and status
             HStack {
-                Image(user.profileImageURL ?? "")
+                profileImage(profileImageURL: user.profileImageURL)
                     .resizable()
                     .scaledToFill()
                     .frame(width: 80, height: 80)
@@ -45,21 +45,36 @@ struct ProfileHeaderView: View {
 
             // Action Button
             Button {
+                if user.isCurrentUser {
+                    print("Show edit profile")
+                } else {
+                    print("Follow user...")
+                }
             } label: {
-                Text("Edit Profile")
+                Text(user.isCurrentUser ? "Edit Profile" : "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
-                    .frame(width: 360, height: 32)
-                    .foregroundColor(.primary)
+                    .frame(width: 360, height: 34)
+                    .background(user.isCurrentUser ? nil : Color(.systemBlue))
+                    .foregroundColor(user.isCurrentUser ? nil : .white)
+                    .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
-                            .stroke(
-                                Color.gray, lineWidth: 1
+                            .strokeBorder(user.isCurrentUser ?
+                                Color.gray : .clear, lineWidth: 1
                             )
                     )
             }
 
             Divider()
+        }
+    }
+
+    func profileImage(profileImageURL: String?) -> Image {
+        if let profileImageURL = profileImageURL, !profileImageURL.isEmpty {
+            return Image(profileImageURL)
+        } else {
+            return Image(systemName: "person.circle")
         }
     }
 }
