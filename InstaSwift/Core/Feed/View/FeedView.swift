@@ -9,6 +9,7 @@ import SwiftUI
 
 struct FeedView: View {
     @Environment(\.colorScheme) var colorScheme
+    
     @StateObject var viewModel = FeedViewModel()
     
     var body: some View {
@@ -35,7 +36,7 @@ struct FeedView: View {
                         .imageScale(.large)
                 }
             }
-            .refreshable {
+            .onAppear {
                 Task {
                     try await viewModel.fetchPosts()
                 }

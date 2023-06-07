@@ -13,14 +13,11 @@ class PostGridViewModel: ObservableObject {
     
     init(user: User) {
         self.user = user
-        
-        Task {
-            try await fetchUserPosts()
-        }
     }
     
     @MainActor
     func fetchUserPosts() async throws {
+        print("DEBUG: refreshed")
         self.posts = try await PostService.fetchUserPosts(uid: user.id)
         
         for i in 0..<posts.count {

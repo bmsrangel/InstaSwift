@@ -11,12 +11,6 @@ import Foundation
 class FeedViewModel: ObservableObject {
     @Published var posts = [Post]()
     
-    init() {
-        Task {
-            try await fetchPosts()
-        }
-    }
-    
     @MainActor
     func fetchPosts() async throws {
         posts = try await PostService.fetchFeedPosts()

@@ -52,6 +52,7 @@
 		F08761EE2A301D01009A7FD5 /* GitHub_Register.gif in Resources */ = {isa = PBXBuildFile; fileRef = F08761EB2A301D01009A7FD5 /* GitHub_Register.gif */; };
 		F08761EF2A301D01009A7FD5 /* GitHub_Feed_Profile.gif in Resources */ = {isa = PBXBuildFile; fileRef = F08761EC2A301D01009A7FD5 /* GitHub_Feed_Profile.gif */; };
 		F08761F02A301D01009A7FD5 /* GitHub_Post.gif in Resources */ = {isa = PBXBuildFile; fileRef = F08761ED2A301D01009A7FD5 /* GitHub_Post.gif */; };
+		F08761FC2A30BFB6009A7FD5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08761FB2A30BFB6009A7FD5 /* DateExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -97,6 +98,7 @@
 		F08761EB2A301D01009A7FD5 /* GitHub_Register.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GitHub_Register.gif; sourceTree = "<group>"; };
 		F08761EC2A301D01009A7FD5 /* GitHub_Feed_Profile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GitHub_Feed_Profile.gif; sourceTree = "<group>"; };
 		F08761ED2A301D01009A7FD5 /* GitHub_Post.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GitHub_Post.gif; sourceTree = "<group>"; };
+		F08761FB2A30BFB6009A7FD5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +189,7 @@
 		F048D8792A2ABCDB00957E6A /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				F08761FB2A30BFB6009A7FD5 /* DateExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -505,6 +508,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F0436F862A2ACFBD000FDF0E /* FeedCell.swift in Sources */,
+				F08761FC2A30BFB6009A7FD5 /* DateExtension.swift in Sources */,
 				F04B24932A2CCBA800ECABFF /* UploadPostView.swift in Sources */,
 				F048D8862A2ABEA900957E6A /* ProfileView.swift in Sources */,
 				F048D86C2A2ABC9D00957E6A /* ContentView.swift in Sources */,

@@ -5,6 +5,7 @@
 //  Created by Bruno Rangel on 02/06/23.
 //
 
+import Firebase
 import Kingfisher
 import SwiftUI
 
@@ -78,7 +79,7 @@ struct FeedCell: View {
             .padding(.leading, 10)
             .padding(.top, 1)
             
-            Text("6h ago")
+            Text(post.timestamp.dateValue().elapsedTime())
                 .font(.footnote)
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .foregroundColor(.gray)

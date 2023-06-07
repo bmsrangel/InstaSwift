@@ -21,7 +21,7 @@ The app consist in a "replica" of a very famous social network, with much more s
 ## Extra functionalities to be implemented
 - [X] Update user data when modified
 - [X] Feed Refresh
-- [ ] Time elapsed after post
+- [X] Time elapsed after post upload
 - [ ] Follow functionality
 - [ ] Posts/Follow/Following count
 - [ ] Open post from profile page
