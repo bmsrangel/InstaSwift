@@ -35,6 +35,11 @@ struct FeedView: View {
                         .imageScale(.large)
                 }
             }
+            .refreshable {
+                Task {
+                    try await viewModel.fetchPosts()
+                }
+            }
         }
     }
 }

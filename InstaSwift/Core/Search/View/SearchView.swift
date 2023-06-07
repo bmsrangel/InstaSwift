@@ -42,6 +42,16 @@ struct SearchView: View {
                 ProfileView(user: user)
             }
             .navigationTitle("Explore")
+            .onAppear {
+                Task {
+                    try await viewModel.fetchAllUsers()
+                }
+            }
+            .refreshable {
+                Task {
+                    try await viewModel.fetchAllUsers()
+                }
+            }
         }
     }
 

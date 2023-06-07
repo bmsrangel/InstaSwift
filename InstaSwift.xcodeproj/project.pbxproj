@@ -127,9 +127,9 @@
 		F048D85D2A2ABC9D00957E6A = {
 			isa = PBXGroup;
 			children = (
+				F048D8682A2ABC9D00957E6A /* InstaSwift */,
 				F08761EA2A301CE4009A7FD5 /* Media */,
 				F04B24B12A2D4E4A00ECABFF /* README.md */,
-				F048D8682A2ABC9D00957E6A /* InstaSwift */,
 				F048D8672A2ABC9D00957E6A /* Products */,
 			);
 			sourceTree = "<group>";
