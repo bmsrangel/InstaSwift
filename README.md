@@ -2,6 +2,11 @@
 
 ## Description
 This project is based on the content of AppStuff's channel: [Build Instagram With an Ex-Meta Engineer | SwiftUI + Firebase](https://www.youtube.com/watch?v=7UKUCZuaVlA)
+The app consist in a "replica" of a very famous socia network.
+
+| <img src="Media/GitHub_Register.gif" width="200" /> | <img src="Media/GitHub_Post.gif" width="200" /> | <img src="Media/GitHub_Feed_Profile.gif" width="200" /> |
+| - | - | - |
+| Register flow | Post flow | Feed and Profile flow |
 
 ## Functionalities covered in the tutorial
 - Login with e-mail and password
