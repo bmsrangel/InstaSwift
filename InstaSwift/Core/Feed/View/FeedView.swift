@@ -12,12 +12,18 @@ struct FeedView: View {
     
     @StateObject var viewModel = FeedViewModel()
     
+    let user: User
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 24) {
                     ForEach(viewModel.posts) {post in
-                        FeedCell(post: post)
+                        FeedCell(post: post, user: user) {
+                            Task {
+                                try await viewModel.toggleLike(postId: post.id, uid: user.id)
+                            }
+                        }
                     }
                 }
                 .padding(.top, 8)
@@ -47,6 +53,6 @@ struct FeedView: View {
 
 struct FeedView_Previews: PreviewProvider {
     static var previews: some View {
-        FeedView()
+        FeedView(user: User.mockUsers[0])
     }
 }

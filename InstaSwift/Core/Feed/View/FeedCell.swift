@@ -11,6 +11,8 @@ import SwiftUI
 
 struct FeedCell: View {
     let post: Post
+    let user: User
+    let onLikeTapped: () -> Void
     
     var body: some View {
         VStack {
@@ -36,10 +38,12 @@ struct FeedCell: View {
             // action buttons
             HStack(spacing: 16) {
                 Button {
-                    print("Like post")
+                    onLikeTapped()
                 } label: {
                     Image(systemName: "heart")
                         .imageScale(.large)
+                        .symbolVariant(post.liked!.contains(user.id) ? .fill : .none)
+                        .foregroundColor(post.liked!.contains(user.id) ? Color(.systemRed) : .primary)
                 }
                 Button {
                     print("Comment post")
@@ -91,6 +95,8 @@ struct FeedCell: View {
 
 struct FeedCell_Previews: PreviewProvider {
     static var previews: some View {
-        FeedCell(post: Post.mockPosts[1])
+        FeedCell(post: Post.mockPosts[1], user: User.mockUsers[1]) {
+            print("On Like Tapped")
+        }
     }
 }
