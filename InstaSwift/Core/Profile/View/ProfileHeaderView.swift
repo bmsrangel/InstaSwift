@@ -12,6 +12,7 @@ struct ProfileHeaderView: View {
     let user: User
 
     @State private var showEditProfile = false
+    @EnvironmentObject var viewModel: PostGridViewModel
 
     var body: some View {
         VStack(spacing: 10) {
@@ -19,7 +20,7 @@ struct ProfileHeaderView: View {
             HStack {
                 CircularProfileImageView(user: user, size: .large)
                 Spacer()
-                UserStatView(value: 2, title: "Posts")
+                UserStatView(value: viewModel.postsCount, title: "Posts")
                 UserStatView(value: 1, title: "Followers")
                 UserStatView(value: 2, title: "Following")
             }

@@ -22,8 +22,9 @@ The app consist in a "replica" of a very famous social network, with much more s
 - [X] Update user data when modified
 - [X] Feed Refresh
 - [X] Time elapsed after post upload
+- [X] Posts count
 - [ ] Follow functionality
-- [ ] Posts/Follow/Following count
+- [ ] Follow/Following count
 - [ ] Open post from profile page
 - [ ] Feed only from followers
 - [ ] Comments
