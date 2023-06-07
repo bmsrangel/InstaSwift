@@ -49,6 +49,9 @@
 		F04B24CE2A2FE3BE00ECABFF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */; };
 		F04B24D02A2FE98A00ECABFF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24CF2A2FE98A00ECABFF /* PostService.swift */; };
 		F04B24D42A2FEB8100ECABFF /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */; };
+		F04B24E02A30121600ECABFF /* GitHub_Feed_Profile.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F04B24DD2A30121500ECABFF /* GitHub_Feed_Profile.mp4 */; };
+		F04B24E12A30121600ECABFF /* GitHub_Post.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F04B24DE2A30121600ECABFF /* GitHub_Post.mp4 */; };
+		F04B24E22A30121600ECABFF /* GitHub_Register.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = F04B24DF2A30121600ECABFF /* GitHub_Register.mp4 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +94,9 @@
 		F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F04B24CF2A2FE98A00ECABFF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
+		F04B24DD2A30121500ECABFF /* GitHub_Feed_Profile.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GitHub_Feed_Profile.mp4; sourceTree = "<group>"; };
+		F04B24DE2A30121600ECABFF /* GitHub_Post.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GitHub_Post.mp4; sourceTree = "<group>"; };
+		F04B24DF2A30121600ECABFF /* GitHub_Register.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = GitHub_Register.mp4; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +127,7 @@
 		F048D85D2A2ABC9D00957E6A = {
 			isa = PBXGroup;
 			children = (
+				F04B24DC2A3011F800ECABFF /* GitHub */,
 				F04B24B12A2D4E4A00ECABFF /* README.md */,
 				F048D8682A2ABC9D00957E6A /* InstaSwift */,
 				F048D8672A2ABC9D00957E6A /* Products */,
@@ -402,6 +409,16 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		F04B24DC2A3011F800ECABFF /* GitHub */ = {
+			isa = PBXGroup;
+			children = (
+				F04B24DD2A30121500ECABFF /* GitHub_Feed_Profile.mp4 */,
+				F04B24DE2A30121600ECABFF /* GitHub_Post.mp4 */,
+				F04B24DF2A30121600ECABFF /* GitHub_Register.mp4 */,
+			);
+			path = GitHub;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -471,7 +488,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F04B24E12A30121600ECABFF /* GitHub_Post.mp4 in Resources */,
+				F04B24E02A30121600ECABFF /* GitHub_Feed_Profile.mp4 in Resources */,
 				F048D8712A2ABC9D00957E6A /* Preview Assets.xcassets in Resources */,
+				F04B24E22A30121600ECABFF /* GitHub_Register.mp4 in Resources */,
 				F048D86E2A2ABC9D00957E6A /* Assets.xcassets in Resources */,
 				F04B24992A2CD56400ECABFF /* GoogleService-Info.plist in Resources */,
 			);
