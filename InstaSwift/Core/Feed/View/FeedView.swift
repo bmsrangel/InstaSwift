@@ -9,11 +9,13 @@ import SwiftUI
 
 struct FeedView: View {
     @Environment(\.colorScheme) var colorScheme
+    @StateObject var viewModel = FeedViewModel()
+    
     var body: some View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 24) {
-                    ForEach(Post.mockPosts) {post in
+                    ForEach(viewModel.posts) {post in
                         FeedCell(post: post)
                     }
                 }

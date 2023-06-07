@@ -46,6 +46,9 @@
 		F04B24C32A2FCE1C00ECABFF /* ImageUploader.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24C22A2FCE1C00ECABFF /* ImageUploader.swift */; };
 		F04B24C62A2FD5EE00ECABFF /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = F04B24C52A2FD5EE00ECABFF /* Kingfisher */; };
 		F04B24C82A2FD69F00ECABFF /* CircularProfileImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24C72A2FD69F00ECABFF /* CircularProfileImageView.swift */; };
+		F04B24CE2A2FE3BE00ECABFF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */; };
+		F04B24D02A2FE98A00ECABFF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24CF2A2FE98A00ECABFF /* PostService.swift */; };
+		F04B24D42A2FEB8100ECABFF /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -85,6 +88,9 @@
 		F04B24C02A2FC7E600ECABFF /* EditProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditProfileViewModel.swift; sourceTree = "<group>"; };
 		F04B24C22A2FCE1C00ECABFF /* ImageUploader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageUploader.swift; sourceTree = "<group>"; };
 		F04B24C72A2FD69F00ECABFF /* CircularProfileImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProfileImageView.swift; sourceTree = "<group>"; };
+		F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
+		F04B24CF2A2FE98A00ECABFF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
+		F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,10 +112,8 @@
 		F0436F802A2AC90E000FDF0E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				F04B24C72A2FD69F00ECABFF /* CircularProfileImageView.swift */,
-				F04B248E2A2CC0A000ECABFF /* PostGridView.swift */,
-				F0436F812A2AC91B000FDF0E /* UserStatView.swift */,
-				F0436F8D2A2B9336000FDF0E /* ISTextFieldModifier.swift */,
+				F04B24D22A2FEB6F00ECABFF /* View */,
+				F04B24D12A2FEB6B00ECABFF /* ViewModel */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -159,6 +163,7 @@
 			children = (
 				F04B24B52A2F6A9800ECABFF /* UserService.swift */,
 				F04B24C22A2FCE1C00ECABFF /* ImageUploader.swift */,
+				F04B24CF2A2FE98A00ECABFF /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -215,8 +220,8 @@
 		F048D87D2A2ABD1F00957E6A /* Feed */ = {
 			isa = PBXGroup;
 			children = (
-				F0436F832A2ACFA7000FDF0E /* FeedView.swift */,
-				F0436F852A2ACFBD000FDF0E /* FeedCell.swift */,
+				F04B24CC2A2FE3AB00ECABFF /* View */,
+				F04B24CB2A2FE3A600ECABFF /* ViewModel */,
 			);
 			path = Feed;
 			sourceTree = "<group>";
@@ -259,8 +264,8 @@
 		F048D8822A2ABD6F00957E6A /* UploadPost */ = {
 			isa = PBXGroup;
 			children = (
-				F04B24922A2CCBA800ECABFF /* UploadPostView.swift */,
-				F04B24942A2CCFE900ECABFF /* UploadPostViewModel.swift */,
+				F04B24CA2A2FDC4300ECABFF /* View */,
+				F04B24C92A2FDC3E00ECABFF /* ViewModel */,
 			);
 			path = UploadPost;
 			sourceTree = "<group>";
@@ -341,6 +346,58 @@
 				F048D8852A2ABEA900957E6A /* ProfileView.swift */,
 				F04B24902A2CC18100ECABFF /* ProfileHeaderView.swift */,
 				F0436F972A2BD025000FDF0E /* CurrentUserProfileView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F04B24C92A2FDC3E00ECABFF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F04B24942A2CCFE900ECABFF /* UploadPostViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F04B24CA2A2FDC4300ECABFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F04B24922A2CCBA800ECABFF /* UploadPostView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F04B24CB2A2FE3A600ECABFF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F04B24CC2A2FE3AB00ECABFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F0436F832A2ACFA7000FDF0E /* FeedView.swift */,
+				F0436F852A2ACFBD000FDF0E /* FeedCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F04B24D12A2FEB6B00ECABFF /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F04B24D22A2FEB6F00ECABFF /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F04B24C72A2FD69F00ECABFF /* CircularProfileImageView.swift */,
+				F04B248E2A2CC0A000ECABFF /* PostGridView.swift */,
+				F0436F812A2AC91B000FDF0E /* UserStatView.swift */,
+				F0436F8D2A2B9336000FDF0E /* ISTextFieldModifier.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -441,8 +498,11 @@
 				F0436F8C2A2B9169000FDF0E /* AddEmailView.swift in Sources */,
 				F04B248F2A2CC0A000ECABFF /* PostGridView.swift in Sources */,
 				F0436F902A2B9401000FDF0E /* CreateUsernameView.swift in Sources */,
+				F04B24CE2A2FE3BE00ECABFF /* FeedViewModel.swift in Sources */,
 				F04B24AB2A2CD83B00ECABFF /* ContentViewModel.swift in Sources */,
+				F04B24D02A2FE98A00ECABFF /* PostService.swift in Sources */,
 				F04B24BD2A2FC4C100ECABFF /* EditProfileView.swift in Sources */,
+				F04B24D42A2FEB8100ECABFF /* PostGridViewModel.swift in Sources */,
 				F04B24B02A2D39C500ECABFF /* LoginViewModel.swift in Sources */,
 				F04B24C32A2FCE1C00ECABFF /* ImageUploader.swift in Sources */,
 				F04B24AE2A2D2FBC00ECABFF /* RegistrationViewModel.swift in Sources */,
