@@ -8,21 +8,21 @@
 import SwiftUI
 
 struct ProfileView: View {
-    @ObservedObject var viewModel: PostGridViewModel
-    
+    @StateObject var viewModel: PostGridViewModel
+
     let user: User
-    
+
     init(user: User) {
         self.user = user
-        _viewModel = ObservedObject(wrappedValue: PostGridViewModel(user: user))
+        _viewModel = StateObject(wrappedValue: PostGridViewModel(user: user))
     }
 
     var body: some View {
         ScrollView {
             // header
-            ProfileHeaderView(user: user)
+            ProfileHeaderView()
             // post grid view
-            PostGridView()
+            PostGridView(posts: viewModel.posts)
         }
         .navigationBarTitleDisplayMode(.inline)
         .navigationTitle("Profile")
@@ -32,6 +32,12 @@ struct ProfileView: View {
             }
         }
         .environmentObject(viewModel)
+        .onAppear {
+            print("DEBUG: Post count: \(viewModel.posts.count)")
+            Task {
+                try await viewModel.fetchUserPosts()
+            }
+        }
     }
 }
 

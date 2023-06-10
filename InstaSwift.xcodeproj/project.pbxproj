@@ -49,10 +49,12 @@
 		F04B24CE2A2FE3BE00ECABFF /* FeedViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */; };
 		F04B24D02A2FE98A00ECABFF /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24CF2A2FE98A00ECABFF /* PostService.swift */; };
 		F04B24D42A2FEB8100ECABFF /* PostGridViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */; };
+		F08294A12A326A77009D9EC3 /* SinglePostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08294A02A326A77009D9EC3 /* SinglePostViewModel.swift */; };
 		F08761EE2A301D01009A7FD5 /* GitHub_Register.gif in Resources */ = {isa = PBXBuildFile; fileRef = F08761EB2A301D01009A7FD5 /* GitHub_Register.gif */; };
 		F08761EF2A301D01009A7FD5 /* GitHub_Feed_Profile.gif in Resources */ = {isa = PBXBuildFile; fileRef = F08761EC2A301D01009A7FD5 /* GitHub_Feed_Profile.gif */; };
 		F08761F02A301D01009A7FD5 /* GitHub_Post.gif in Resources */ = {isa = PBXBuildFile; fileRef = F08761ED2A301D01009A7FD5 /* GitHub_Post.gif */; };
 		F08761FC2A30BFB6009A7FD5 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08761FB2A30BFB6009A7FD5 /* DateExtension.swift */; };
+		F08761FE2A315A3D009A7FD5 /* SinglePostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F08761FD2A315A3D009A7FD5 /* SinglePostView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -95,10 +97,12 @@
 		F04B24CD2A2FE3BE00ECABFF /* FeedViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewModel.swift; sourceTree = "<group>"; };
 		F04B24CF2A2FE98A00ECABFF /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostGridViewModel.swift; sourceTree = "<group>"; };
+		F08294A02A326A77009D9EC3 /* SinglePostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostViewModel.swift; sourceTree = "<group>"; };
 		F08761EB2A301D01009A7FD5 /* GitHub_Register.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GitHub_Register.gif; sourceTree = "<group>"; };
 		F08761EC2A301D01009A7FD5 /* GitHub_Feed_Profile.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GitHub_Feed_Profile.gif; sourceTree = "<group>"; };
 		F08761ED2A301D01009A7FD5 /* GitHub_Post.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = GitHub_Post.gif; sourceTree = "<group>"; };
 		F08761FB2A30BFB6009A7FD5 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
+		F08761FD2A315A3D009A7FD5 /* SinglePostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinglePostView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -397,6 +401,7 @@
 			isa = PBXGroup;
 			children = (
 				F04B24D32A2FEB8100ECABFF /* PostGridViewModel.swift */,
+				F08294A02A326A77009D9EC3 /* SinglePostViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -408,6 +413,7 @@
 				F04B248E2A2CC0A000ECABFF /* PostGridView.swift */,
 				F0436F812A2AC91B000FDF0E /* UserStatView.swift */,
 				F0436F8D2A2B9336000FDF0E /* ISTextFieldModifier.swift */,
+				F08761FD2A315A3D009A7FD5 /* SinglePostView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -530,6 +536,7 @@
 				F04B24B02A2D39C500ECABFF /* LoginViewModel.swift in Sources */,
 				F04B24C32A2FCE1C00ECABFF /* ImageUploader.swift in Sources */,
 				F04B24AE2A2D2FBC00ECABFF /* RegistrationViewModel.swift in Sources */,
+				F08294A12A326A77009D9EC3 /* SinglePostViewModel.swift in Sources */,
 				F04B24952A2CCFE900ECABFF /* UploadPostViewModel.swift in Sources */,
 				F04B24912A2CC18100ECABFF /* ProfileHeaderView.swift in Sources */,
 				F0436F942A2B96E4000FDF0E /* CompleteSignUpView.swift in Sources */,
@@ -537,6 +544,7 @@
 				F0436F882A2B70AA000FDF0E /* SearchView.swift in Sources */,
 				F0436F822A2AC91B000FDF0E /* UserStatView.swift in Sources */,
 				F0436F842A2ACFA7000FDF0E /* FeedView.swift in Sources */,
+				F08761FE2A315A3D009A7FD5 /* SinglePostView.swift in Sources */,
 				F0436F8E2A2B9336000FDF0E /* ISTextFieldModifier.swift in Sources */,
 				F04B24C82A2FD69F00ECABFF /* CircularProfileImageView.swift in Sources */,
 				F04B24BB2A2F6B5B00ECABFF /* SearchViewModel.swift in Sources */,

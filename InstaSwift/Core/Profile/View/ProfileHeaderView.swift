@@ -9,8 +9,6 @@ import Kingfisher
 import SwiftUI
 
 struct ProfileHeaderView: View {
-    let user: User
-
     @State private var showEditProfile = false
     @EnvironmentObject var viewModel: PostGridViewModel
 
@@ -18,7 +16,7 @@ struct ProfileHeaderView: View {
         VStack(spacing: 10) {
             // pic and status
             HStack {
-                CircularProfileImageView(user: user, size: .large)
+                CircularProfileImageView(user: viewModel.user, size: .large)
                 Spacer()
                 UserStatView(value: viewModel.postsCount, title: "Posts")
                 UserStatView(value: 1, title: "Followers")
@@ -29,12 +27,12 @@ struct ProfileHeaderView: View {
 
             // Name and Bio
             VStack(alignment: .leading, spacing: 4) {
-                if let fullname = user.fullname {
+                if let fullname = viewModel.user.fullname {
                     Text(fullname)
                         .font(.footnote)
                         .fontWeight(.semibold)
                 }
-                if let bio = user.bio {
+                if let bio = viewModel.user.bio {
                     Text(bio)
                         .font(.footnote)
                 }
@@ -44,22 +42,22 @@ struct ProfileHeaderView: View {
 
             // Action Button
             Button {
-                if user.isCurrentUser {
+                if viewModel.user.isCurrentUser {
                     showEditProfile.toggle()
                 } else {
                     print("Follow user...")
                 }
             } label: {
-                Text(user.isCurrentUser ? "Edit Profile" : "Follow")
+                Text(viewModel.user.isCurrentUser ? "Edit Profile" : "Follow")
                     .font(.subheadline)
                     .fontWeight(.semibold)
                     .frame(width: 360, height: 34)
-                    .background(user.isCurrentUser ? nil : Color(.systemBlue))
-                    .foregroundColor(user.isCurrentUser ? nil : .white)
+                    .background(viewModel.user.isCurrentUser ? nil : Color(.systemBlue))
+                    .foregroundColor(viewModel.user.isCurrentUser ? nil : .white)
                     .cornerRadius(6)
                     .overlay(
                         RoundedRectangle(cornerRadius: 6)
-                            .strokeBorder(user.isCurrentUser ?
+                            .strokeBorder(viewModel.user.isCurrentUser ?
                                 Color.gray : .clear, lineWidth: 1
                             )
                     )
@@ -68,13 +66,13 @@ struct ProfileHeaderView: View {
             Divider()
         }
         .fullScreenCover(isPresented: $showEditProfile) {
-            EditProfileView(user: user)
+            EditProfileView(user: viewModel.user)
         }
     }
 }
 
 struct ProfileHeaderView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfileHeaderView(user: User.mockUsers[1])
+        ProfileHeaderView()
     }
 }

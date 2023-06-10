@@ -42,8 +42,8 @@ struct FeedCell: View {
                 } label: {
                     Image(systemName: "heart")
                         .imageScale(.large)
-                        .symbolVariant(post.liked!.contains(user.id) ? .fill : .none)
-                        .foregroundColor(post.liked!.contains(user.id) ? Color(.systemRed) : .primary)
+                        .symbolVariant(post.liked?.contains(user.id) ?? false ? .fill : .none)
+                        .foregroundColor(post.liked?.contains(user.id) ?? false ? Color(.systemRed) : .primary)
                 }
                 Button {
                     print("Comment post")

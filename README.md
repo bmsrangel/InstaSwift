@@ -23,10 +23,10 @@ The app consist in a "replica" of a very famous social network, with much more s
 - [X] Feed Refresh
 - [X] Time elapsed after post upload
 - [X] Posts count
+- [X] Likes
 - [ ] Follow functionality
 - [ ] Follow/Following count
-- [ ] Open post from profile page
+- [X] Open post from profile page
 - [ ] Feed only from followers
 - [ ] Comments
-- [ ] Likes
 
